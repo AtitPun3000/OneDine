@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../assets/One_Dine.png";
-
 import { CiSearch } from "react-icons/ci";
 import { HiShoppingCart } from "react-icons/hi";
 import { Link, Outlet } from "react-router-dom";
@@ -25,9 +24,9 @@ export default function MainLayout() {
             <Link to="/events">Events</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
-          </div>
-          <div>
-            <HiShoppingCart className="text-2xl" />
+            <Link to="/cart">
+              <HiShoppingCart className="text-2xl" />
+            </Link>
           </div>
         </div>
       </div>

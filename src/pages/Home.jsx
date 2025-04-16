@@ -1,8 +1,11 @@
 import React from "react";
 import BackgroundImage from "../assets/background.jpeg";
+import MealBox from "../assets/mealbox.png";
 import MemorableEvents from "../components/MemorableEvents";
 import GuestExperiences from "../components/GuestExperiences";
 import ExploreCategories from "../components/ExploreCategories";
+import ContactUs from "../components/ContactUs";
+import FooterPage from "../components/FooterPage";
 
 export default function Homepage() {
   return (
@@ -42,15 +45,14 @@ export default function Homepage() {
           </button>
         </div>
         <div>
-          <img
-            src="https://s3-alpha-sig.figma.com/img/7eb8/ac2b/28b6c758e8203959b172830b4b5ee177?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=dvRjTrh~lx4V5iuPysmQzXaBzihzGW670bmZA-EJxnBuPRBBxW52pzlNBYhxSB6OHrgXpXB4GZ10-cmmmE60THg6aZHT9r0ptmD0KIuuNl2aam0xC8HKFYMmH3YjAq-vTs8Dl8tCAcE9BopTZX0FDJQrARce5wrfyQE~BcItsISsRMTv~NP6A3anoRb-JFGnsMJBeTrGYCnfhL7o4RFQpWdMfTlWejy4ZS-HLpk6vg6w6VKlHzcS4nh6gkpPnTQdM6LJut92Us4wTsYpDX3Dfd5xvpHGLe-Ez8ajT4wEuRAV76ZCzL043N8cvLG-0ILLQfp1FsIVJ6MVIFnQlPBp~g__"
-            alt=""
-          />
+          <img src={MealBox} alt="MealBox" />
         </div>
       </div>
 
       <MemorableEvents />
       <GuestExperiences />
+      <ContactUs />
+      <FooterPage />
     </div>
   );
 }
