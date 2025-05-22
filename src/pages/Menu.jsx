@@ -6,8 +6,8 @@ import Plate from "../assets/plate.png";
 export default function Menu() {
   return (
     <div>
-      <div className="flex relative gap-24 mb-8">
-        <div className="flex flex-col gap-2 pt-24 pl-36">
+      <div className="h-[750px] sm:h-[600px] flex relative gap-24 mb-8">
+        <div className="absolute top-80 left-4 sm:top-8 sm:relative sm:flex sm:flex-col sm:gap-2 sm:pt-24 sm:pl-36">
           <h1 className="font-medium text-2xl">Fast & Unique Taste</h1>
           <h2 className="font-semibold leading-8 text-4xl">
             Come for the Taste
@@ -29,11 +29,11 @@ export default function Menu() {
           </button>
         </div>
 
-        <div className="absolute w-[724px] h-[661px] top-[40px] left-[891px]">
+        <div className="relative left-52 top-28 sm:absolute sm:w-[724px] sm:h-[661px] sm:top-[40px] sm:left-[891px]">
           <img src={Plate} alt="Plate" />
         </div>
 
-        <div className="w-[693px] h-[550px] ml-auto rounded-tl-[100px] rounded-bl-[100px] bg-[#FFB700]"></div>
+        <div className="w-[693px] h-96 sm:h-[550px] ml-auto rounded-tl-[100px] rounded-bl-[100px] bg-[#FFB700]"></div>
       </div>
 
       <Categories />

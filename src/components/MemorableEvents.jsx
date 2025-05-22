@@ -13,7 +13,7 @@ export default function MemorableEvents() {
           Memorable Past Events
         </h1>
       </div>
-      <div className="flex gap-6 mx-36">
+      <div className="flex gap-6 px-4 sm:mx-36">
         <div>
           <img
             src={Pic001}

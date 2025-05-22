@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Sarah from "../assets/sarah.jpeg";
 import Rajesh from "../assets/rajesh.jpeg";
 import Emma from "../assets/emma.jpeg";
 import { IoMdStar } from "react-icons/io";
 import { IoMdStarHalf } from "react-icons/io";
 import { IoMdStarOutline } from "react-icons/io";
-import TextWithBackground from "./ui/TextWithBackground";
 
 const reviews = [
   {
@@ -38,15 +37,52 @@ const reviews = [
 ];
 
 export default function GuestExperiences() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextReview = () => {
+    setCurrentIndex((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
   return (
-    <div className="mx-36 my-10">
-      <TextWithBackground>Guest Experiences</TextWithBackground>
+    <div className="text-center max-w-md mx-auto">
+      <div className="flex justify-center">
+        <h1 className="bg-[#FFB700] px-4 py-0.5 text-lg font-semibold leading-none">
+          Guest Experiences
+        </h1>
+      </div>
       <h2 className="text-xl font-light text-gray-700 text-center">
         Discover what our guests have to say about their stay at One Dine
       </h2>
-      <div className="flex flex-row gap-4 mt-10">
-        {reviews.map((review, index) => (
-          <ReviewCard key={index} review={review} />
+      <div className="p-5 border border-gray-300 min-h-[100px]">
+        <ReviewCard key={currentIndex} review={reviews[currentIndex]} />
+      </div>
+      <div className="mt-2.5">
+        <button
+          onClick={prevReview}
+          className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+        >
+          Previous
+        </button>
+        <button
+          onClick={nextReview}
+          className="ml-2.5 px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+        >
+          Next
+        </button>
+      </div>
+      <div className="flex justify-center mt-4 space-x-2">
+        {reviews.map((_, index) => (
+          <span
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-3 h-3 rounded-full cursor-pointer ${
+              index === currentIndex ? "bg-black" : "bg-gray-300"
+            }`}
+          ></span>
         ))}
       </div>
     </div>

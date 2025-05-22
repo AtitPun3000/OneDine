@@ -9,9 +9,9 @@ export default function TextWithBackground({
   return (
     <div
       className={cn(
-        "w-fit mb-4 relative mx-auto after:bg-[#FFB700] after:content-['']",
-        "after:w-full after:h-4 after:opacity-50 after:-translate-y-[10%]",
-        "after:top-1/2 after:z-[-1] after:px-8 after:absolute",
+        "w-fit mb-4 relative mx-auto before:bg-[#FFB700] before:content-['']",
+        "before:w-full before:h-4 before:opacity-50 before:-translate-y-[10%]",
+        "before:top-1/2 before:z-[-1] before:px-8 before:absolute",
         parentClass
       )}
     >

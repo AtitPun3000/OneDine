@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         rubik: ["Rubik Maps", "sans-serif"],
       },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],

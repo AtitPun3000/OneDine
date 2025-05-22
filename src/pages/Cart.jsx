@@ -7,8 +7,8 @@ import FooterPage from "../components/FooterPage";
 export default function About() {
   return (
     <div>
-      <div className="flex flex-col pt-[60px] pl-[200px] w-full">
-        <div className="flex justify-between w-[1520px] h-12 border bg-[#FFFAFA]">
+      <div className="flex flex-col items-center pt-[60px] sm:pl-[200px] w-full">
+        <div className="flex justify-between w-[480px] sm:w-[1520px] h-12 border bg-[#FFFAFA]">
           <div className="flex px-8 items-center">
             <label>
               <input type="checkbox" /> Select all (5 items)

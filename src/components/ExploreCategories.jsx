@@ -9,9 +9,9 @@ import TextWithBackground from "./ui/TextWithBackground";
 
 export default function ExploreCategories() {
   return (
-    <div className="my-10 w-full">
+    <div className="flex flex-col gap-2 items-center mx-auto py-8">
       <TextWithBackground>Explore Our Food Categories</TextWithBackground>
-      <div className="w-full grid grid-cols-3 gap-4 px-48">
+      <div className="w-full grid px-4 grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 sm:px-48">
         <div className="relative">
           <img
             alt="starter"

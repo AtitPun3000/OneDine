@@ -137,7 +137,7 @@ export default function ColdBeverages() {
   return (
     <div>
       <TextWithBackground>Cold Beverages</TextWithBackground>
-      <div className="grid grid-cols-4 gap-x-4 pb-16 gap-y-4 mx-96">
+      <div className="grid grid-cols-2 gap-2 px-4 py-6 sm:grid-cols-4 sm:gap-x-4 sm:pb-16 sm:gap-y-4 sm:mx-96">
         {coldDrinks.map((item) => (
           <div key={item.id} className="flex flex-col gap-2">
             <div>
